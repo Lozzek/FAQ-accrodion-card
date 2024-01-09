@@ -1,0 +1,171 @@
+*, *::before, *::after {
+    box-sizing: border-box;
+}
+
+* {
+    margin: 0;
+}
+
+body {
+    line-height: 1.5;
+    -webkit-font-smoothing: antialiased;
+
+    display: grid;
+    place-content: center;
+    height: 100vh;
+    background: linear-gradient(to bottom, #B068E9, #6463E7 );
+    font-size: 12px;
+    font-family: 'Kumbh Sans';
+}
+ 
+img, picture, video, canvas, svg {
+    display: block;
+    max-width: 100%;
+}
+ 
+input, button, textarea, select {
+    font: inherit;
+}
+
+p, h1, h2, h3, h4, h5, h6 {
+    overflow-wrap: break-word;
+}
+  
+#root, #__next {
+    isolation: isolate;
+}
+
+
+.hidden {
+    display: none;
+}
+
+.answer {
+    padding-top: 1rem;
+}
+
+/* rotate arrow when clicked */
+.rotate {
+    transform: rotate(180deg);
+    transition: transform 0.5s ease;
+    transition-delay: 0s;
+}
+
+.desktop-img { 
+    display: none;
+}
+
+.mobile-img {
+    position: absolute;
+    top: -105px;
+    left: 18px;
+
+    width: 239px;
+    height: 180px;
+}
+
+.img-shadow {
+    position: absolute;
+    top: 0;
+    left: 18px;
+}
+
+.card {
+    background-color: #FFF;
+    border-radius: 20px;
+    margin: 0 1.4rem;
+    position: relative;
+    padding: 8rem 1rem 3rem;
+}
+
+.question-section {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+
+.question:hover {
+    cursor: pointer;
+    color: #F47B56;
+}
+
+h1 {
+    font-weight: 700;
+    font-size: 32px;
+    text-align: center;
+    margin-bottom: 1.2rem;
+}
+
+.question {
+    font-size: 13px;
+    font-weight: 400;
+}
+
+hr {
+    opacity: .3;
+}
+
+.active {
+    display: block;
+}
+
+.qna {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    cursor: pointer;
+    gap: 15px;
+}
+
+ /* bold question when clicked */
+.question-clicked {
+    font-weight: 700;
+    color: black;
+}
+
+
+@media screen and (min-width: 1200px) {
+    .card {
+        display: flex;
+        flex-direction: row;
+        justify-content: flex-end;
+        
+        width: 920px;
+        height: 509px;
+
+        background: url('images/bg-pattern-desktop.svg') no-repeat left -600px top -265px, #FFF;
+    }
+
+    .question-section {
+        padding: 0 4em 0 0;
+        width: 400px;
+    }
+
+    h1 {
+        text-align: left;
+    }
+
+    h2 {
+        font-size: 24px;
+    }
+
+    .desktop-img { 
+        display: block;
+    }
+
+    .mobile-img,
+    .img-shadow {
+        display: none;
+    }
+
+    .desktop-img { 
+        position: absolute;
+        top: 100px;
+        left: -100px;
+    }
+
+   
+
+}
